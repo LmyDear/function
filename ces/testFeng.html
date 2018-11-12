@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="testFeng.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/testFeng.js"></script>
+    <script src="js/graden.js"></script>
+    <script src="js/function.js"></script>
+</head>
+<body>
+     <div id="background"> 
+        <div class="love love-left"></div>
+        <div class="love love-right"></div>
+        <div class="love love-bottom"></div>
+        <div id="loveHeart">
+            <canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你直到永永远远。<br/>
+					<div class="signature">- 冯先生</div>
+				</div>
+			</div>
+		</div>
+    <div id="piao"></div>
+    </div>
+    <script type="text/javascript">
+    
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var together = new Date();
+        together.setFullYear(2017, 09, 05);
+        together.setHours(19);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
+        
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                startHeartAnimation();
+            }, 2000);
+        
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 500);
+        
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+        </script>
+</body>
+
+
+</html>
