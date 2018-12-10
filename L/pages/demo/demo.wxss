@@ -1,0 +1,94 @@
+/* pages/demo/demo.wxss */
+.swiper {
+  height: 600rpx;
+  background:rgba(248, 163, 177,0.1);
+}
+.swiper swiper-item{
+  display: flex;
+  justify-content: center;
+}
+.swiper image{
+  height: 100%;
+}
+.rela{
+  position: relative;
+}
+.rela>image{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  z-index: -1
+}
+.rela>image:nth-of-type(1){
+  top: 60rpx;
+  left: 40rpx;
+  transform: rotateZ(-30deg)
+}
+.rela>image:nth-of-type(2){
+  top: 240rpx;
+  left: 100rpx;
+  transform: rotateZ(-20deg)
+}
+.rela>image:nth-of-type(3){
+  top: 460rpx;
+  left: 80rpx;
+  transform: rotateZ(20deg)
+}
+.rela>image:nth-of-type(4){
+  top: 40rpx;
+  right: 140rpx;
+  transform: rotateZ(-20deg)
+}
+.rela>image:nth-of-type(5){
+  top: 210rpx;
+  right: 100rpx;
+  transform: rotateZ(-20deg)
+}
+.rela>image:nth-of-type(6){
+  top: 280rpx;
+  right: 160rpx;
+  transform: rotateZ(30deg)
+}
+.rela>image:nth-of-type(7){
+  top: 340rpx;
+  right: 60rpx;
+  transform: rotateZ(30deg)
+}
+
+/*分类导航  */
+.class{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background:rgba(248, 163, 177,0.1);
+}
+
+.class view{
+  font-size: 28rpx;
+  margin-top: 14rpx;
+  padding: 20rpx 30rpx;
+  text-align: center;
+}
+.active{
+  background: rgba(248, 163, 177,0.3);
+  border-radius: 10rpx;
+}
+
+/*图片渲染  */
+.content{
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content>view{
+  width: 50%;
+  margin: 40rpx 0;
+  text-align: center;
+}
+.content>view>image{
+  width: 70%;
+  border-radius: 30rpx;
+  box-shadow: 0rpx 0rpx 80rpx rgba(248, 163, 177,0.5);
+}

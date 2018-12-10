@@ -1,0 +1,6 @@
+<!--pages/photo/photo.wxml-->
+<view>
+  <image src='{{url}}'></image>
+  <button bindtap='savePhoto'>保存图片</button>
+  <input value='{{val}}' bindinput='change'></input>
+</view>

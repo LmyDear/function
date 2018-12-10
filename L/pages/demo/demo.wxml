@@ -1,0 +1,28 @@
+<!--pages/demo/demo.wxml-->
+<view >
+  <view class='rela'>
+    <swiper autoplay interval='4000' duration='800' circular='true' class='swiper'>
+      <swiper-item wx:for="{{imgUrl}}" wx:key><image  src='{{item}}' mode='aspectFit'></image></swiper-item>
+    </swiper>
+    <image src='../../image/icon/boot.png' mode='aspectFit'></image>
+    <image src='../../image/icon/tshirt.png' mode='aspectFit'></image>
+    <image src='../../image/icon/兔子.png' mode='aspectFit'></image>
+    <image src='../../image/icon/小熊.png' mode='aspectFit'></image>
+    <image src='../../image/icon/白兔.png' mode='aspectFit'></image>
+    <image src='../../image/icon/粉尘.png' mode='aspectFit'></image>
+    <image src='../../image/icon/粉底.png' mode='aspectFit'></image>
+  </view>
+  <!--分类导航  -->
+  <view class='class'>
+    <view wx:for="{{imgClass}}" wx:key class='{{classInd==index?"active":""}}' data-index='{{index}}'  bindtap='cli'>{{item.name}}</view>
+  </view>
+  <!--图片渲染  -->
+  <view class='content'>
+    <view wx:for="{{content}}" wx:key data-index='{{index}}' bindtap="previewImg" >
+      <image src='{{item}}' mode='widthFix'></image>
+    </view>
+    <view bindtap='addImg'>
+      <image src='../../image/icon/添加.png'mode='widthFix'></image>
+    </view>
+  </view>
+</view>
