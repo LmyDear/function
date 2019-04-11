@@ -1,0 +1,45 @@
+/* pages/calendar/calendar.wxss */
+.calendar{
+  
+}
+.selectDate{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.selectDate .date-wrap{
+  margin: 0 10px;
+}
+.week{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.date-box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.date{
+  display: flex;
+  flex-wrap: wrap
+}
+.date .today{
+  background: #366BF8;
+  color: #fff;
+  box-shadow: 0px 3px 10px #666;
+}
+.date .selectDay{
+  box-sizing: border-box;
+  border: 2px solid #366BF8;
+}
+.date>view{
+  border-radius: 50%;
+}
+.date .nextColor{
+  color: #999
+}
+.date .day{
+  text-align: center;
+}

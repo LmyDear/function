@@ -1,0 +1,22 @@
+<!--pages/calendar/calendar.wxml-->
+<view class="calendar">
+  <view class="selectDate">
+    <view class="goleft" bindtap="prevMonth">{{left}}</view>
+    <view class="date-wrap">
+      {{year}}年{{month}}月
+    </view>
+    <view class="goright" bindtap="nextMonth">{{right}}</view>
+  </view>
+  <view class="week">
+    <view wx:for="{{weekArr}}" wx:for-index="index" wx:for-item="item" wx:key="key" style="width:{{param}}px;height:{{param-17}}px;line-height:{{param-17}}px">{{item}}</view>
+  </view>
+  <view class='date-box'>
+    <view class="date" style='width: {{ param * 7 }}px;'>
+      <block wx:for="{{dateArr}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+        <view style="width:{{param}}px;height:{{param}}px;line-height:{{param}}px;" class="{{index+1 == selectDay?'selectDay':''}} {{index+1 == nowDay&&nowMonth == month?'today':''}} {{index+1==day&&isClock?'clockOn':''}} {{index <firstDay || index >= lastDay + firstDay?'nextColor':''}}" bindtap='selectDay' data-index='{{index+1}}'>
+          <view class="day">{{item}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

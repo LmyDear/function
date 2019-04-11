@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/photo/photo",
+    "pages/calendar/calendar",
     "pages/index/index",
     "pages/logs/logs",
     "pages/demo/demo"
@@ -11,5 +11,18 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#FB5A5A",
+    "list": [
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "日历"
+      }
+    ]
   }
 }
